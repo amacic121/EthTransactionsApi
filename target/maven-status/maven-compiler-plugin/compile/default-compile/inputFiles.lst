@@ -1,5 +1,6 @@
-C:\Users\andrej\Documents\ETH task\etherum-main\etherum-main\src\main\java\dev\etherum\config\Web3jConfig.java
-C:\Users\andrej\Documents\ETH task\etherum-main\etherum-main\src\main\java\dev\etherum\EtherumApplication.java
-C:\Users\andrej\Documents\ETH task\etherum-main\etherum-main\src\main\java\dev\etherum\service\EthTransactionService.java
-C:\Users\andrej\Documents\ETH task\etherum-main\etherum-main\src\main\java\dev\etherum\controller\EthController.java
-C:\Users\andrej\Documents\ETH task\etherum-main\etherum-main\src\main\java\dev\etherum\model\EthTransactionDTO.java
+C:\Users\andrej\Documents\Task\ethereumTransactionsTask\src\main\java\dev\ethereum\controller\EthController.java
+C:\Users\andrej\Documents\Task\ethereumTransactionsTask\src\main\java\dev\ethereum\service\EthTransactionService.java
+C:\Users\andrej\Documents\Task\ethereumTransactionsTask\src\main\java\dev\ethereum\EtherumApplication.java
+C:\Users\andrej\Documents\Task\ethereumTransactionsTask\src\main\java\dev\ethereum\model\EthTransactionDTO.java
+C:\Users\andrej\Documents\Task\ethereumTransactionsTask\src\main\java\dev\ethereum\service\EthBalanceAtCertainTimeService.java
+C:\Users\andrej\Documents\Task\ethereumTransactionsTask\src\main\java\dev\ethereum\config\Web3jConfig.java

@@ -8,16 +8,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="etherum-main" />
-        <module name="etherumTransactionsTask" />
+        <module name="ethereumTransactionsTask" />
         <module name="etherum" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ethereumTransactionsTask" options="-parameters" />
       <module name="etherum" options="-parameters" />
       <module name="etherum-main" options="-parameters" />
-      <module name="etherumTransactionsTask" options="-parameters" />
     </option>
   </component>
 </project>
