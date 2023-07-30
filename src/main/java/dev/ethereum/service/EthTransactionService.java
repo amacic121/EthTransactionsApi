@@ -20,7 +20,7 @@ public class EthTransactionService {
     private Web3j web3j;
 
     public List<EthTransactionDTO> crawlTransactions(String walletAddress, Long blockNumber) {
-        List<EthTransactionDTO> transactionInfoList = new ArrayList<>();
+        List<EthTransactionDTO> transactionList = new ArrayList<>();
 
         try {
             BigInteger latestBlockNumber = web3j.ethBlockNumber().send().getBlockNumber();
@@ -51,7 +51,7 @@ public class EthTransactionService {
                                 .amount(amount)
                                 .build();
 
-                        transactionInfoList.add(transactionInfo);
+                        transactionList.add(transactionInfo);
                     }
                 }
             }
@@ -59,6 +59,6 @@ public class EthTransactionService {
             e.printStackTrace();
         }
 
-        return transactionInfoList;
+        return transactionList;
     }
 }
