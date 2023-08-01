@@ -1,7 +1,14 @@
 async function fetchTransactions(walletAddress, blockNumber) {
-    console.log('Fetching transactions...')
+    console.log('Fetching transactions...');
     try {
-        const response = await fetch(`/api/ethereum/crawl?walletAddress=${walletAddress}&blockNumber=${blockNumber}`);
+        const apiKey = document.getElementById('apiKey').value.trim();
+
+        if (!apiKey) {
+            alert('Please enter an API key.');
+            return [];
+        }
+
+        const response = await fetch(`/api/ethereum/crawl?walletAddress=${walletAddress}&blockNumber=${blockNumber}&apiKey=${apiKey}`);
         const data = await response.json();
         console.log(data);
         return data;
@@ -12,7 +19,6 @@ async function fetchTransactions(walletAddress, blockNumber) {
 }
 
 async function displayTransactions() {
-    console.log('DOM content loaded');
     const walletAddressInput = document.getElementById('walletAddress');
     const blockNumberInput = document.getElementById('blockNumber');
     const fetchTransactionsBtn = document.getElementById('fetchTransactionsBtn');
@@ -23,7 +29,7 @@ async function displayTransactions() {
         const blockNumber = parseInt(blockNumberInput.value);
 
         if (!walletAddress || isNaN(blockNumber)) {
-            transactionsContainer.innerHTML = '<p>Please enter a valid wallet address and block number.</p>';
+            transactionsContainer.innerHTML = '<p>Please enter a valid wallet address, block number</p>';
             return;
         }
 
@@ -71,7 +77,15 @@ async function fetchEthBalance(walletAddress, timestamp) {
     //console.log("Formatiran Datum:", formattedTimestamp);
 
     try {
-        const ethGetBalanceResponse = await fetch(`/api/ethereum/balance?walletAddress=${walletAddress}&timestamp=${timestamp}`);
+        const apiKey = document.getElementById('apiKey').value.trim();
+
+        if (!apiKey) {
+            alert('Please enter an API key.');
+            throw new Error("API key is missing.");
+        }
+
+
+        const ethGetBalanceResponse = await fetch(`/api/ethereum/balance?walletAddress=${walletAddress}&timestamp=${timestamp}&apiKey=${apiKey}`);
         const ethGetBalanceData = await ethGetBalanceResponse.text();
 
         console.log("ETH Balance Response:", ethGetBalanceData);
@@ -93,7 +107,7 @@ async function displayEthBalance() {
         const walletAddress = walletAddressInput.value.trim();
 
         if (!timestamp) {
-            ethBalanceResult.textContent = 'Please enter a valid timestamp (YYYY-MM-DD).';
+            ethBalanceResult.textContent = 'Please enter a valid timestamp';
             return;
         }
 
