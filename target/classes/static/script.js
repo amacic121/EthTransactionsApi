@@ -19,7 +19,6 @@ async function fetchTransactions(walletAddress, blockNumber) {
 }
 
 async function displayTransactions() {
-    console.log('DOM content loaded');
     const walletAddressInput = document.getElementById('walletAddress');
     const blockNumberInput = document.getElementById('blockNumber');
     const fetchTransactionsBtn = document.getElementById('fetchTransactionsBtn');
@@ -78,7 +77,7 @@ async function fetchEthBalance(walletAddress, timestamp) {
     //console.log("Formatiran Datum:", formattedTimestamp);
 
     try {
-        const apiKey = document.getElementById('apiKey').value.trim(); // Get the API key from the input field
+        const apiKey = document.getElementById('apiKey').value.trim();
 
         if (!apiKey) {
             alert('Please enter an API key.');
