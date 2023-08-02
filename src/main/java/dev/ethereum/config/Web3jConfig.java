@@ -26,4 +26,3 @@ public class Web3jConfig {
         return Web3j.build(new HttpService("https://mainnet.infura.io/v3/" + infuraApiKey));
     }
 }
-
