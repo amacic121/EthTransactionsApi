@@ -3,43 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethereum Transactions</title>
+    <title style="font-weight: bold;">Ethereum Transactions</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
 <div class="container my-5">
-    <h1 class="mb-4">Ethereum Transactions</h1>
+    <h1 class="mb-4" style="font-weight: bold; text-align: center;">Ethereum Transactions</h1>
     <div class="mb-3">
-        <label for="walletAddress" class="form-label">Wallet Address:</label>
+        <label for="walletAddress" class="form-label" style="font-weight: bold;">Wallet Address:</label>
         <input type="text" class="form-control" id="walletAddress" placeholder="Enter wallet address">
     </div>
     <div class="mb-3">
-        <label for="blockNumber" class="form-label">Block Number:</label>
+        <label for="blockNumber" class="form-label" style="font-weight: bold;">Block Number:</label>
         <input type="number" class="form-control" id="blockNumber" placeholder="Enter block number">
     </div>
     <div class="row g-2">
         <div class="col-md">
-            <label for="timestamp" class="form-label">Timestamp (YYYY-MM-DD):</label>
+            <label for="timestamp" class="form-label" style="font-weight: bold;">Timestamp (YYYY-MM-DD):</label>
             <input type="text" id="timestamp" class="form-control" placeholder="Enter timestamp (YYYY-MM-DD)">
         </div>
     </div>
-    <div class="mb-3">
-        <label for="apiKey" class="form-label">Infura API Key:</label>
+    <div class="mb-3 mt-2">
+        <label for="apiKey" class="form-label" style="font-weight: bold;">Infura API Key:</label>
         <input type="text" class="form-control" id="apiKey" placeholder="Enter Infura API Key">
     </div>
     <div class="row g-2 mt-2">
         <div class="col-md-auto">
-            <button id="fetchTransactionsBtn" class="custom-button">Fetch Transactions</button>
+            <button id="fetchTransactionsBtn" class="custom-button" style="font-weight: bold;">Fetch Transactions</button>
         </div>
         <div class="col-md-auto">
-            <button id="fetchEthBalanceBtn" class="custom-button">Fetch ETH Balance</button>
+            <button id="fetchEthBalanceBtn" class="custom-button" style="font-weight: bold;">Fetch ETH Balance</button>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <p class="fw-bold">ETH Balance at Timestamp:</p>
+            <p class="fw-bold mb-2" style="font-size: 1.2rem;">ETH Balance at Timestamp:</p>
             <p id="ethBalanceAtTimestamp" class="result-text"></p>
         </div>
     </div>
@@ -47,9 +47,9 @@
         <table id="transactions-table" class="table table-bordered table-striped">
             <thead>
             <tr>
-                <th>Sender</th>
-                <th>Receiver</th>
-                <th>Amount (ETH in Wei)</th>
+                <th style="font-weight: bold;">Sender</th>
+                <th style="font-weight: bold;">Receiver</th>
+                <th style="font-weight: bold;">Amount (ETH in Wei)</th>
             </tr>
             </thead>
             <tbody>

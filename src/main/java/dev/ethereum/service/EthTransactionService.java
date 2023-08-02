@@ -30,7 +30,6 @@ public class EthTransactionService {
                         .send()
                         .getBlock();
 
-
                 List<EthBlock.TransactionResult> transactions = block.getTransactions();
 
                 for (EthBlock.TransactionResult transactionResult : transactions) {

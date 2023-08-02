@@ -73,9 +73,6 @@ async function displayTransactions() {
 }
 async function fetchEthBalance(walletAddress, timestamp) {
 
-   // const formattedTimestamp = formatDateFromInput(timestamp);
-    //console.log("Formatiran Datum:", formattedTimestamp);
-
     try {
         const apiKey = document.getElementById('apiKey').value.trim();
 
@@ -110,9 +107,6 @@ async function displayEthBalance() {
             ethBalanceResult.textContent = 'Please enter a valid timestamp';
             return;
         }
-
-        //const formattedTimestamp = formatDateFromInput(timestamp);
-
         try {
             ethBalanceResult.textContent = 'Fetching ETH balance.......';
             const ethBalance = await fetchEthBalance(walletAddress, timestamp);
@@ -122,15 +116,6 @@ async function displayEthBalance() {
         }
     });
 }
-
-// function formatDateFromInput(inputDate) {
-//     const date = new Date(inputDate);
-//     const year = date.getUTCFullYear();
-//     const month = String(date.getUTCMonth() + 1).padStart(2, '0');
-//     const day = String(date.getUTCDate()).padStart(2, '0');
-//     return `${year}-${month}-${day}`;
-// }
-
 document.addEventListener('DOMContentLoaded', function () {
     displayTransactions();
     displayEthBalance();
